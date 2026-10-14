@@ -1,0 +1,2168 @@
+{
+ "meta": {
+  "source": "yugiohmeta.com (Duel Links Meta) TCG tier list + deck-type breakdowns",
+  "window": "Last 1 month up to 2026-10-14 (current F&L list effective 2026-09-21)",
+  "tops": 515,
+  "sampledDeckTypes": {
+   "Elfnote": 17.09,
+   "Dark Magician Chaos Ritual": 11.26,
+   "Kewl Tune": 9.51,
+   "Chaos Ritual": 6.21,
+   "Blitzclique": 4.08,
+   "Invoked": 3.88,
+   "Branded": 3.69,
+   "Artmage": 3.11,
+   "Sky Striker": 2.91
+  },
+  "sampledShare": 61.74,
+  "generatedAt": "2026-10-14",
+  "excludedForbidden": [
+   "Dimension Shifter",
+   "Kewl Tune Rotary",
+   "PSY-Framelord Omega",
+   "Protectcode Talker"
+  ]
+ },
+ "cards": [
+  {
+   "rank": 1,
+   "key": "ash-blossom-and-joyous-spring",
+   "name": "Ash Blossom & Joyous Spring",
+   "status": "unlimited",
+   "coverage": 61.74,
+   "decks": [
+    "Elfnote",
+    "Dark Magician Chaos Ritual",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Invoked",
+    "Branded",
+    "Artmage",
+    "Sky Striker"
+   ],
+   "id": 14558127,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 2,
+   "key": "mulcharmy-fuwalos",
+   "name": "Mulcharmy Fuwalos",
+   "status": "unlimited",
+   "coverage": 61.74,
+   "decks": [
+    "Elfnote",
+    "Dark Magician Chaos Ritual",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Invoked",
+    "Branded",
+    "Artmage",
+    "Sky Striker"
+   ],
+   "id": 42141493,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 3,
+   "key": "droll-and-lock-bird",
+   "name": "Droll & Lock Bird",
+   "status": "semi",
+   "coverage": 61.74,
+   "decks": [
+    "Elfnote",
+    "Dark Magician Chaos Ritual",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Invoked",
+    "Branded",
+    "Artmage",
+    "Sky Striker"
+   ],
+   "id": 94145021,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 4,
+   "key": "called-by-the-grave",
+   "name": "Called by the Grave",
+   "status": "limited",
+   "coverage": 61.74,
+   "decks": [
+    "Elfnote",
+    "Dark Magician Chaos Ritual",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Invoked",
+    "Branded",
+    "Artmage",
+    "Sky Striker"
+   ],
+   "id": 24224830,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 5,
+   "key": "albion-the-branded-dragon",
+   "name": "Albion the Branded Dragon",
+   "status": "unlimited",
+   "coverage": 57.86,
+   "decks": [
+    "Elfnote",
+    "Dark Magician Chaos Ritual",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Branded",
+    "Artmage",
+    "Sky Striker"
+   ],
+   "id": 87746184,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 6,
+   "key": "the-fallen-and-the-virtuous",
+   "name": "The Fallen & The Virtuous",
+   "status": "unlimited",
+   "coverage": 57.86,
+   "decks": [
+    "Elfnote",
+    "Dark Magician Chaos Ritual",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Branded",
+    "Artmage",
+    "Sky Striker"
+   ],
+   "id": 30271097,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 7,
+   "key": "ecclesia-and-the-dark-dragon",
+   "name": "Ecclesia and the Dark Dragon",
+   "status": "unlimited",
+   "coverage": 57.86,
+   "decks": [
+    "Elfnote",
+    "Dark Magician Chaos Ritual",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Branded",
+    "Artmage",
+    "Sky Striker"
+   ],
+   "id": 78397661,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 8,
+   "key": "mulcharmy-purulia",
+   "name": "Mulcharmy Purulia",
+   "status": "unlimited",
+   "coverage": 49.32,
+   "decks": [
+    "Elfnote",
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Invoked",
+    "Branded",
+    "Artmage"
+   ],
+   "id": 84192580,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 9,
+   "key": "s-p-little-knight",
+   "name": "S:P Little Knight",
+   "status": "unlimited",
+   "coverage": 48.54,
+   "decks": [
+    "Elfnote",
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Invoked",
+    "Artmage",
+    "Sky Striker"
+   ],
+   "id": 29301450,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 10,
+   "key": "golden-cloud-beast-malong",
+   "name": "Golden Cloud Beast - Malong",
+   "status": "unlimited",
+   "coverage": 36.89,
+   "decks": [
+    "Elfnote",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique"
+   ],
+   "id": 93125329,
+   "type": "Synchro Tuner Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 11,
+   "key": "chaos-angel",
+   "name": "Chaos Angel",
+   "status": "unlimited",
+   "coverage": 39.8,
+   "decks": [
+    "Elfnote",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Invoked",
+    "Artmage"
+   ],
+   "id": 22850702,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 12,
+   "key": "triple-tactics-talent",
+   "name": "Triple Tactics Talent",
+   "status": "limited",
+   "coverage": 50.48,
+   "decks": [
+    "Elfnote",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Invoked",
+    "Branded",
+    "Artmage",
+    "Sky Striker"
+   ],
+   "id": 25311006,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 13,
+   "key": "ghost-ogre-and-snow-rabbit",
+   "name": "Ghost Ogre & Snow Rabbit",
+   "status": "unlimited",
+   "coverage": 41.16,
+   "decks": [
+    "Elfnote",
+    "Kewl Tune",
+    "Blitzclique",
+    "Invoked",
+    "Branded",
+    "Sky Striker"
+   ],
+   "id": 59438930,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 14,
+   "key": "fydraulis-harmonia",
+   "name": "Fydraulis Harmonia",
+   "status": "unlimited",
+   "coverage": 36.89,
+   "decks": [
+    "Elfnote",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique"
+   ],
+   "id": 70088809,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 15,
+   "key": "ghost-belle-and-haunted-mansion",
+   "name": "Ghost Belle & Haunted Mansion",
+   "status": "unlimited",
+   "coverage": 37.08,
+   "decks": [
+    "Elfnote",
+    "Kewl Tune",
+    "Invoked",
+    "Branded",
+    "Sky Striker"
+   ],
+   "id": 73642296,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 16,
+   "key": "bystial-magnamhut",
+   "name": "Bystial Magnamhut",
+   "status": "limited",
+   "coverage": 40.58,
+   "decks": [
+    "Elfnote",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Branded"
+   ],
+   "id": 33854624,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 17,
+   "key": "enigmaster-packbit",
+   "name": "Enigmaster Packbit",
+   "status": "unlimited",
+   "coverage": 36.89,
+   "decks": [
+    "Elfnote",
+    "Kewl Tune",
+    "Chaos Ritual",
+    "Blitzclique"
+   ],
+   "id": 72444406,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 18,
+   "key": "wind-pegasus-at-ignister",
+   "name": "Wind Pegasus @Ignister",
+   "status": "unlimited",
+   "coverage": 30.68,
+   "decks": [
+    "Elfnote",
+    "Kewl Tune",
+    "Blitzclique"
+   ],
+   "id": 98506199,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 19,
+   "key": "nibiru-the-primal-being",
+   "name": "Nibiru, the Primal Being",
+   "status": "unlimited",
+   "coverage": 38.44,
+   "decks": [
+    "Elfnote",
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual",
+    "Invoked"
+   ],
+   "id": 27204311,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 20,
+   "key": "skull-archfiend-of-chaos",
+   "name": "Skull Archfiend of Chaos",
+   "status": "unlimited",
+   "coverage": 21.16,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 24088928,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 21,
+   "key": "effect-veiler",
+   "name": "Effect Veiler",
+   "status": "unlimited",
+   "coverage": 26.6,
+   "decks": [
+    "Elfnote",
+    "Kewl Tune"
+   ],
+   "id": 97268402,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 22,
+   "key": "medius-the-pure",
+   "name": "Medius the Pure",
+   "status": "unlimited",
+   "coverage": 20.2,
+   "decks": [
+    "Elfnote",
+    "Artmage"
+   ],
+   "id": 97556336,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 23,
+   "key": "vidolium-the-unstable-power-patron-of-unity",
+   "name": "Vidolium the Unstable Power Patron of Unity",
+   "status": "unlimited",
+   "coverage": 20.2,
+   "decks": [
+    "Elfnote",
+    "Artmage"
+   ],
+   "id": 70488851,
+   "type": "Pendulum Effect Monster",
+   "frameType": "effect_pendulum"
+  },
+  {
+   "rank": 24,
+   "key": "dogmatika-ecclesia-the-virtuous",
+   "name": "Dogmatika Ecclesia, the Virtuous",
+   "status": "unlimited",
+   "coverage": 31.07,
+   "decks": [
+    "Elfnote",
+    "Chaos Ritual",
+    "Blitzclique",
+    "Branded"
+   ],
+   "id": 60303688,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 25,
+   "key": "light-and-darkness-ritual",
+   "name": "Light and Darkness Ritual",
+   "status": "unlimited",
+   "coverage": 21.16,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 33599853,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 26,
+   "key": "junora-the-power-patron-of-tuning",
+   "name": "Junora the Power Patron of Tuning",
+   "status": "unlimited",
+   "coverage": 20.2,
+   "decks": [
+    "Elfnote",
+    "Artmage"
+   ],
+   "id": 5914858,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 27,
+   "key": "kewl-tune-b2b",
+   "name": "Kewl Tune B2B",
+   "status": "unlimited",
+   "coverage": 26.6,
+   "decks": [
+    "Elfnote",
+    "Kewl Tune"
+   ],
+   "id": 65961304,
+   "type": "Synchro Tuner Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 28,
+   "key": "magician-of-dark-chaos-black-chaos",
+   "name": "Magician of Dark Chaos - Black Chaos",
+   "status": "unlimited",
+   "coverage": 21.16,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 44001993,
+   "type": "Ritual Effect Monster",
+   "frameType": "ritual"
+  },
+  {
+   "rank": 29,
+   "key": "griffoh",
+   "name": "Griffoh",
+   "status": "unlimited",
+   "coverage": 17.47,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual"
+   ],
+   "id": 97462632,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 30,
+   "key": "elfnote-lucina",
+   "name": "Elfnote Lucina",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 13597785,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 31,
+   "key": "elfnote-seraphim-strelitzia",
+   "name": "Elfnote Seraphim Strelitzia",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 42302563,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 32,
+   "key": "prohibited-power-patron-portal-terminus",
+   "name": "Prohibited Power Patron Portal - Terminus",
+   "status": "limited",
+   "coverage": 20.2,
+   "decks": [
+    "Elfnote",
+    "Artmage"
+   ],
+   "id": 25661743,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 33,
+   "key": "stardust-dragon",
+   "name": "Stardust Dragon",
+   "status": "unlimited",
+   "coverage": 23.3,
+   "decks": [
+    "Elfnote",
+    "Chaos Ritual"
+   ],
+   "id": 44508094,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 34,
+   "key": "black-chaos",
+   "name": "Black Chaos",
+   "status": "unlimited",
+   "coverage": 17.47,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual"
+   ],
+   "id": 98684220,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 35,
+   "key": "elfnote-regina",
+   "name": "Elfnote Regina",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 56651978,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 36,
+   "key": "f-a-dawn-dragster",
+   "name": "F.A. Dawn Dragster",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 33158448,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 37,
+   "key": "despian-luluwalilith",
+   "name": "Despian Luluwalilith",
+   "status": "unlimited",
+   "coverage": 27.38,
+   "decks": [
+    "Elfnote",
+    "Chaos Ritual",
+    "Blitzclique"
+   ],
+   "id": 53971455,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 38,
+   "key": "dark-magician-of-destruction",
+   "name": "Dark Magician of Destruction",
+   "status": "unlimited",
+   "coverage": 21.16,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 59400890,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 39,
+   "key": "elfnote-power-patron",
+   "name": "Elfnote Power Patron",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 12375297,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 40,
+   "key": "crystal-wing-synchro-dragon",
+   "name": "Crystal Wing Synchro Dragon",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 50954680,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 41,
+   "key": "mind-shuffle",
+   "name": "Mind Shuffle",
+   "status": "unlimited",
+   "coverage": 17.47,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual"
+   ],
+   "id": 24749710,
+   "type": "Trap Card",
+   "frameType": "trap"
+  },
+  {
+   "rank": 42,
+   "key": "junoldo-the-shadespirit-power-patron",
+   "name": "Junoldo the Shadespirit Power Patron",
+   "status": "unlimited",
+   "coverage": 20.2,
+   "decks": [
+    "Elfnote",
+    "Artmage"
+   ],
+   "id": 10266279,
+   "type": "Pendulum Effect Monster",
+   "frameType": "effect_pendulum"
+  },
+  {
+   "rank": 43,
+   "key": "elfnote-tinia",
+   "name": "Elfnote Tinia",
+   "status": "limited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 59581480,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 44,
+   "key": "elfnote-june-pride",
+   "name": "Elfnote June Pride",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 5559570,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 45,
+   "key": "elfnotes-welcome-home",
+   "name": "Elfnotes: Welcome Home",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 64491754,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 46,
+   "key": "the-dragon-that-devours-the-dogma",
+   "name": "The Dragon that Devours the Dogma",
+   "status": "unlimited",
+   "coverage": 16.89,
+   "decks": [
+    "Chaos Ritual",
+    "Blitzclique",
+    "Branded",
+    "Sky Striker"
+   ],
+   "id": 76666602,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 47,
+   "key": "elfnote-fortuna",
+   "name": "Elfnote Fortuna",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 85976588,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 48,
+   "key": "psychic-end-punisher",
+   "name": "Psychic End Punisher",
+   "status": "unlimited",
+   "coverage": 21.17,
+   "decks": [
+    "Elfnote",
+    "Blitzclique"
+   ],
+   "id": 60465049,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 49,
+   "key": "black-rose-dragon",
+   "name": "Black Rose Dragon",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 73580471,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 50,
+   "key": "elfnotes-rhapsodia-of-madness",
+   "name": "Elfnotes: Rhapsodia of Madness",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 24092792,
+   "type": "Trap Card",
+   "frameType": "trap"
+  },
+  {
+   "rank": 51,
+   "key": "ragged-records-of-rites",
+   "name": "Ragged Records of Rites",
+   "status": "unlimited",
+   "coverage": 17.47,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual"
+   ],
+   "id": 24461358,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 52,
+   "key": "accel-synchro-stardust-dragon",
+   "name": "Accel Synchro Stardust Dragon",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 30983281,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 53,
+   "key": "t-g-hyper-librarian",
+   "name": "T.G. Hyper Librarian",
+   "status": "limited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 90953320,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 54,
+   "key": "magicians-souls",
+   "name": "Magicians' Souls",
+   "status": "unlimited",
+   "coverage": 17.47,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual"
+   ],
+   "id": 97631303,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 55,
+   "key": "stardust-dragon-victim-sanctuary",
+   "name": "Stardust Dragon - Victim Sanctuary",
+   "status": "unlimited",
+   "coverage": 23.3,
+   "decks": [
+    "Elfnote",
+    "Chaos Ritual"
+   ],
+   "id": 76636978,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 56,
+   "key": "ravenous-crocodragon-archethys",
+   "name": "Ravenous Crocodragon Archethys",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 87188910,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 57,
+   "key": "red-eyes-dark-dragoon",
+   "name": "Red-Eyes Dark Dragoon",
+   "status": "unlimited",
+   "coverage": 14.95,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Branded"
+   ],
+   "id": 37818794,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 58,
+   "key": "infernal-strike-fighter",
+   "name": "Infernal Strike Fighter",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 66122213,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 59,
+   "key": "theorealize-past-lull",
+   "name": "Theorealize Past Lull",
+   "status": "unlimited",
+   "coverage": 20.2,
+   "decks": [
+    "Elfnote",
+    "Artmage"
+   ],
+   "id": 36709484,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 60,
+   "key": "arcanite-magician",
+   "name": "Arcanite Magician",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 31924889,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 61,
+   "key": "charmer-quartet-in-bloom",
+   "name": "Charmer Quartet in Bloom",
+   "status": "unlimited",
+   "coverage": 14.37,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Artmage"
+   ],
+   "id": 27519978,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 62,
+   "key": "black-luster-soldier-soldier-of-light-and-darkness",
+   "name": "Black Luster Soldier - Soldier of Light and Darkness",
+   "status": "unlimited",
+   "coverage": 17.47,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual"
+   ],
+   "id": 70405001,
+   "type": "Ritual Effect Monster",
+   "frameType": "ritual"
+  },
+  {
+   "rank": 63,
+   "key": "super-polymerization",
+   "name": "Super Polymerization",
+   "status": "unlimited",
+   "coverage": 16.89,
+   "decks": [
+    "Chaos Ritual",
+    "Invoked",
+    "Branded",
+    "Artmage"
+   ],
+   "id": 48130397,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 64,
+   "key": "the-gaze-of-timaeus",
+   "name": "The Gaze of Timaeus",
+   "status": "unlimited",
+   "coverage": 14.95,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Branded"
+   ],
+   "id": 22283204,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 65,
+   "key": "purification-power-patron",
+   "name": "Purification Power Patron",
+   "status": "unlimited",
+   "coverage": 20.2,
+   "decks": [
+    "Elfnote",
+    "Artmage"
+   ],
+   "id": 31822037,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 66,
+   "key": "theorealize",
+   "name": "Theorealize",
+   "status": "unlimited",
+   "coverage": 20.2,
+   "decks": [
+    "Elfnote",
+    "Artmage"
+   ],
+   "id": 48739627,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 67,
+   "key": "ruddy-rose-dragon",
+   "name": "Ruddy Rose Dragon",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 40139997,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 68,
+   "key": "super-starslayer-ty-phon-sky-crisis",
+   "name": "Super Starslayer TY-PHON - Sky Crisis",
+   "status": "unlimited",
+   "coverage": 16.5,
+   "decks": [
+    "Kewl Tune",
+    "Blitzclique",
+    "Sky Striker"
+   ],
+   "id": 93039339,
+   "type": "XYZ Monster",
+   "frameType": "xyz"
+  },
+  {
+   "rank": 69,
+   "key": "mixousia-the-confounder",
+   "name": "Mixousia the Confounder",
+   "status": "unlimited",
+   "coverage": 16.89,
+   "decks": [
+    "Chaos Ritual",
+    "Invoked",
+    "Branded",
+    "Artmage"
+   ],
+   "id": 80843006,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 70,
+   "key": "fallen-of-the-white-dragon",
+   "name": "Fallen of the White Dragon",
+   "status": "unlimited",
+   "coverage": 13.98,
+   "decks": [
+    "Chaos Ritual",
+    "Blitzclique",
+    "Branded"
+   ],
+   "id": 73819701,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 71,
+   "key": "rindbrumm-the-striking-dragon",
+   "name": "Rindbrumm the Striking Dragon",
+   "status": "unlimited",
+   "coverage": 13.98,
+   "decks": [
+    "Chaos Ritual",
+    "Blitzclique",
+    "Branded"
+   ],
+   "id": 51409648,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 72,
+   "key": "dark-magical-curtain",
+   "name": "Dark Magical Curtain",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 41350417,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 73,
+   "key": "mirrorjade-the-iceblade-dragon",
+   "name": "Mirrorjade the Iceblade Dragon",
+   "status": "unlimited",
+   "coverage": 13.98,
+   "decks": [
+    "Chaos Ritual",
+    "Blitzclique",
+    "Branded"
+   ],
+   "id": 44146295,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 74,
+   "key": "pre-preparation-of-rites",
+   "name": "Pre-Preparation of Rites",
+   "status": "unlimited",
+   "coverage": 17.47,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Chaos Ritual"
+   ],
+   "id": 13048472,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 75,
+   "key": "incredible-ecclesia-the-virtuous",
+   "name": "Incredible Ecclesia, the Virtuous",
+   "status": "unlimited",
+   "coverage": 13.98,
+   "decks": [
+    "Chaos Ritual",
+    "Blitzclique",
+    "Branded"
+   ],
+   "id": 55273560,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 76,
+   "key": "cross-sheep",
+   "name": "Cross-Sheep",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 50277355,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 77,
+   "key": "jet-synchron",
+   "name": "Jet Synchron",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 9742784,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 78,
+   "key": "the-three-champions-of-swordsoul",
+   "name": "The Three Champions of Swordsoul",
+   "status": "unlimited",
+   "coverage": 13.98,
+   "decks": [
+    "Chaos Ritual",
+    "Blitzclique",
+    "Branded"
+   ],
+   "id": 74405783,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 79,
+   "key": "w-p-fancy-ball",
+   "name": "W:P Fancy Ball",
+   "status": "unlimited",
+   "coverage": 14.37,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Artmage"
+   ],
+   "id": 4993187,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 80,
+   "key": "selene-queen-of-the-master-magicians",
+   "name": "Selene, Queen of the Master Magicians",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 45819647,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 81,
+   "key": "relinquished-anima",
+   "name": "Relinquished Anima",
+   "status": "unlimited",
+   "coverage": 14.37,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Artmage"
+   ],
+   "id": 94259633,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 82,
+   "key": "dark-magician",
+   "name": "Dark Magician",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 46986414,
+   "type": "Normal Monster",
+   "frameType": "normal"
+  },
+  {
+   "rank": 83,
+   "key": "starjunk-synchron",
+   "name": "Starjunk Synchron",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 13021682,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 84,
+   "key": "pot-of-prosperity",
+   "name": "Pot of Prosperity",
+   "status": "limited",
+   "coverage": 13.59,
+   "decks": [
+    "Kewl Tune",
+    "Blitzclique"
+   ],
+   "id": 84211599,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 85,
+   "key": "accel-synchron",
+   "name": "Accel Synchron",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 37675907,
+   "type": "Synchro Tuner Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 86,
+   "key": "zenna-s-deceiving-doll-maidens",
+   "name": "Zenna's Deceiving Doll Maidens",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 7594154,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 87,
+   "key": "kewl-tune-track-maker",
+   "name": "Kewl Tune Track Maker",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 42781164,
+   "type": "Synchro Tuner Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 88,
+   "key": "synchro-emergency",
+   "name": "Synchro Emergency",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 49415281,
+   "type": "Trap Card",
+   "frameType": "trap"
+  },
+  {
+   "rank": 89,
+   "key": "illusion-of-chaos",
+   "name": "Illusion of Chaos",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 12266229,
+   "type": "Ritual Effect Monster",
+   "frameType": "ritual"
+  },
+  {
+   "rank": 90,
+   "key": "dharc-the-dark-charmer-gloomy",
+   "name": "Dharc the Dark Charmer, Gloomy",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 8264361,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 91,
+   "key": "kewl-tune-remix",
+   "name": "Kewl Tune Remix",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 88170262,
+   "type": "Synchro Tuner Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 92,
+   "key": "kewl-tune-cue",
+   "name": "Kewl Tune Cue",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 16387555,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 93,
+   "key": "magician-s-rod",
+   "name": "Magician's Rod",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 7084129,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 94,
+   "key": "granguignol-the-dusk-dragon",
+   "name": "Granguignol the Dusk Dragon",
+   "status": "unlimited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 24915933,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 95,
+   "key": "cyberse-contract-witch",
+   "name": "Cyberse Contract Witch",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 37458564,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 96,
+   "key": "kewl-tune-synchro",
+   "name": "Kewl Tune Synchro",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 78058681,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 97,
+   "key": "wanted-seeker-of-sinful-spoils",
+   "name": "WANTED: Seeker of Sinful Spoils",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 80845034,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 98,
+   "key": "kewl-tune-rs",
+   "name": "Kewl Tune RS",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 15665977,
+   "type": "Synchro Tuner Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 99,
+   "key": "kuriboh-multiply",
+   "name": "Kuriboh - Multiply!",
+   "status": "unlimited",
+   "coverage": 14.37,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Artmage"
+   ],
+   "id": 14965712,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 100,
+   "key": "garura-wings-of-resonant-life",
+   "name": "Garura, Wings of Resonant Life",
+   "status": "unlimited",
+   "coverage": 13.4,
+   "decks": [
+    "Chaos Ritual",
+    "Blitzclique",
+    "Artmage"
+   ],
+   "id": 11765832,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 101,
+   "key": "dominus-purge",
+   "name": "Dominus Purge",
+   "status": "unlimited",
+   "coverage": 13.59,
+   "decks": [
+    "Kewl Tune",
+    "Blitzclique"
+   ],
+   "id": 97045737,
+   "type": "Trap Card",
+   "frameType": "trap"
+  },
+  {
+   "rank": 102,
+   "key": "diabellstar-the-black-witch",
+   "name": "Diabellstar the Black Witch",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 72270339,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 103,
+   "key": "kewl-tune-reco",
+   "name": "Kewl Tune Reco",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 89392810,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 104,
+   "key": "azamina-ilia-silvia",
+   "name": "Azamina Ilia Silvia",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 46396218,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 105,
+   "key": "dominus-spark",
+   "name": "Dominus Spark",
+   "status": "unlimited",
+   "coverage": 14.95,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Branded"
+   ],
+   "id": 6325660,
+   "type": "Trap Card",
+   "frameType": "trap"
+  },
+  {
+   "rank": 106,
+   "key": "the-hallowed-azamina",
+   "name": "The Hallowed Azamina",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 94845588,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 107,
+   "key": "kewl-tune-mix",
+   "name": "Kewl Tune Mix",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 16509007,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 108,
+   "key": "kewl-tune-loudness-war",
+   "name": "Kewl Tune Loudness War",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 41069676,
+   "type": "Synchro Tuner Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 109,
+   "key": "pot-of-desires",
+   "name": "Pot of Desires",
+   "status": "unlimited",
+   "coverage": 12.42,
+   "decks": [
+    "Kewl Tune",
+    "Sky Striker"
+   ],
+   "id": 35261759,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 110,
+   "key": "blazing-cartesia-the-virtuous",
+   "name": "Blazing Cartesia, the Virtuous",
+   "status": "unlimited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 95515789,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 111,
+   "key": "arms-of-genex-return-zero",
+   "name": "Arms of Genex Return Zero",
+   "status": "unlimited",
+   "coverage": 17.09,
+   "decks": [
+    "Elfnote"
+   ],
+   "id": 61775475,
+   "type": "Synchro Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 112,
+   "key": "deception-of-the-sinful-spoils",
+   "name": "Deception of the Sinful Spoils",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 66328392,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 113,
+   "key": "fallen-of-albaz",
+   "name": "Fallen of Albaz",
+   "status": "unlimited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 68468459,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 114,
+   "key": "branded-in-high-spirits",
+   "name": "Branded in High Spirits",
+   "status": "semi",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 29948294,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 115,
+   "key": "titaniklad-the-ash-dragon",
+   "name": "Titaniklad the Ash Dragon",
+   "status": "unlimited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 41373230,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 116,
+   "key": "azamina-mu-rcielago",
+   "name": "Azamina Mu Rcielago",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 73391962,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 117,
+   "key": "jj-kewl-tune",
+   "name": "JJ \"Kewl Tune\"",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 14442329,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 118,
+   "key": "underworld-goddess-of-the-closed-world",
+   "name": "Underworld Goddess of the Closed World",
+   "status": "unlimited",
+   "coverage": 14.37,
+   "decks": [
+    "Dark Magician Chaos Ritual",
+    "Artmage"
+   ],
+   "id": 98127546,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 119,
+   "key": "dominus-impulse",
+   "name": "Dominus Impulse",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 40366667,
+   "type": "Trap Card",
+   "frameType": "trap"
+  },
+  {
+   "rank": 120,
+   "key": "mudragon-of-the-swamp",
+   "name": "Mudragon of the Swamp",
+   "status": "unlimited",
+   "coverage": 13.4,
+   "decks": [
+    "Chaos Ritual",
+    "Blitzclique",
+    "Artmage"
+   ],
+   "id": 54757758,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 121,
+   "key": "zalen-the-shackled-dragon",
+   "name": "Zalen the Shackled Dragon",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 4891376,
+   "type": "Synchro Tuner Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 122,
+   "key": "mitsurugi-prayers",
+   "name": "Mitsurugi Prayers",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 45171524,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 123,
+   "key": "deep-sea-prima-donna",
+   "name": "Deep Sea Prima Donna",
+   "status": "unlimited",
+   "coverage": 13.59,
+   "decks": [
+    "Kewl Tune",
+    "Blitzclique"
+   ],
+   "id": 50793215,
+   "type": "Synchro Tuner Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 124,
+   "key": "kewl-tune-clip",
+   "name": "Kewl Tune Clip",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 43904702,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 125,
+   "key": "dark-magician-the-pharaoh-s-servant",
+   "name": "Dark Magician, the Pharaoh's Servant",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 88570003,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 126,
+   "key": "synchro-overtake",
+   "name": "Synchro Overtake",
+   "status": "limited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 99243014,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 127,
+   "key": "sea-monster-of-theseus",
+   "name": "Sea Monster of Theseus",
+   "status": "unlimited",
+   "coverage": 13.2,
+   "decks": [
+    "Chaos Ritual",
+    "Invoked",
+    "Artmage"
+   ],
+   "id": 96334243,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 128,
+   "key": "mitsurugi-mirror",
+   "name": "Mitsurugi Mirror",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 49721684,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 129,
+   "key": "mitsurugi-no-mikoto-saji",
+   "name": "Mitsurugi no Mikoto, Saji",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 18176525,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 130,
+   "key": "ame-no-murakumo-no-mitsurugi",
+   "name": "Ame no Murakumo no Mitsurugi",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 19899073,
+   "type": "Ritual Effect Monster",
+   "frameType": "ritual"
+  },
+  {
+   "rank": 131,
+   "key": "visas-amritara",
+   "name": "Visas Amritara",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 821049,
+   "type": "Synchro Tuner Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 132,
+   "key": "accesscode-talker",
+   "name": "Accesscode Talker",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 86066372,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 133,
+   "key": "ame-no-habakiri-no-mitsurugi",
+   "name": "Ame no Habakiri no Mitsurugi",
+   "status": "limited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 13332685,
+   "type": "Ritual Effect Monster",
+   "frameType": "ritual"
+  },
+  {
+   "rank": 134,
+   "key": "duelist-genesis",
+   "name": "Duelist Genesis",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 97474300,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 135,
+   "key": "despian-quaeritis",
+   "name": "Despian Quaeritis",
+   "status": "unlimited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 72272462,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  },
+  {
+   "rank": 136,
+   "key": "mitsurugi-ritual",
+   "name": "Mitsurugi Ritual",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 81560239,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 137,
+   "key": "i-p-masquerena",
+   "name": "I:P Masquerena",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 65741786,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 138,
+   "key": "mitsurugi-no-mikoto-aramasa",
+   "name": "Mitsurugi no Mikoto, Aramasa",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 40543231,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 139,
+   "key": "firewall-dragon",
+   "name": "Firewall Dragon",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 5043010,
+   "type": "Link Monster",
+   "frameType": "link"
+  },
+  {
+   "rank": 140,
+   "key": "branded-fusion",
+   "name": "Branded Fusion",
+   "status": "limited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 44362883,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 141,
+   "key": "kewl-tune-crackle",
+   "name": "Kewl Tune Crackle",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 39576656,
+   "type": "Synchro Tuner Monster",
+   "frameType": "synchro"
+  },
+  {
+   "rank": 142,
+   "key": "infinite-impermanence",
+   "name": "Infinite Impermanence",
+   "status": "unlimited",
+   "coverage": 9.51,
+   "decks": [
+    "Kewl Tune"
+   ],
+   "id": 10045474,
+   "type": "Trap Card",
+   "frameType": "trap"
+  },
+  {
+   "rank": 143,
+   "key": "nadir-servant",
+   "name": "Nadir Servant",
+   "status": "unlimited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 1984618,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 144,
+   "key": "aluber-the-jester-of-despia",
+   "name": "Aluber the Jester of Despia",
+   "status": "unlimited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 62962630,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 145,
+   "key": "forbidden-crown",
+   "name": "Forbidden Crown",
+   "status": "unlimited",
+   "coverage": 12.23,
+   "decks": [
+    "Chaos Ritual",
+    "Artmage",
+    "Sky Striker"
+   ],
+   "id": 98829635,
+   "type": "Spell Card",
+   "frameType": "spell"
+  },
+  {
+   "rank": 146,
+   "key": "guiding-quem-the-virtuous",
+   "name": "Guiding Quem, the Virtuous",
+   "status": "unlimited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 45883110,
+   "type": "Tuner Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 147,
+   "key": "albion-the-shrouded-dragon",
+   "name": "Albion the Shrouded Dragon",
+   "status": "unlimited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 25451383,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 148,
+   "key": "phara-the-primordial-goddess",
+   "name": "Phara the Primordial Goddess",
+   "status": "unlimited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 82344137,
+   "type": "Effect Monster",
+   "frameType": "effect"
+  },
+  {
+   "rank": 149,
+   "key": "mitsurugi-great-purification",
+   "name": "Mitsurugi Great Purification",
+   "status": "unlimited",
+   "coverage": 11.26,
+   "decks": [
+    "Dark Magician Chaos Ritual"
+   ],
+   "id": 17954937,
+   "type": "Trap Card",
+   "frameType": "trap"
+  },
+  {
+   "rank": 150,
+   "key": "lubellion-the-searing-dragon",
+   "name": "Lubellion the Searing Dragon",
+   "status": "unlimited",
+   "coverage": 9.9,
+   "decks": [
+    "Chaos Ritual",
+    "Branded"
+   ],
+   "id": 70534340,
+   "type": "Fusion Monster",
+   "frameType": "fusion"
+  }
+ ]
+}

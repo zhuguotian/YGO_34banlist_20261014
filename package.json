@@ -1,0 +1,11 @@
+{
+  "name": "ygo-banlist-predictor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Make your own prediction of the 34 Forbidden + 8 Limited cards and export it as an image. Static site for GitHub Pages.",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "setup": "node scripts/setup-cards.mjs",
+    "preview": "npx --yes serve ."
+  }
+}

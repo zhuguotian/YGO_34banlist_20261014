@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>TCG 禁卡表预测</title>
+  <meta name="description" content="34 张新禁止 + 8 张新限制，你猜是哪 42 张？从近一个月 TCG 上位最常用的 150 张卡里选出你的预测，导出图片分享。">
+  <meta property="og:title" content="TCG 禁卡表预测">
+  <meta property="og:description" content="34 张新禁止 + 8 张新限制，你猜是哪 42 张？">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='13' fill='%23111' stroke='%23C8102E' stroke-width='4'/%3E%3Cpath d='M7 25L25 7' stroke='%23C8102E' stroke-width='4'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#grid" data-i18n="skip">跳到卡池</a>
+
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <div class="masthead-top">
+        <h1 data-i18n="title">TCG 禁卡表预测</h1>
+        <div class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="zh" aria-pressed="true">中文</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+      <p class="lede" data-i18n="lede"></p>
+      <div class="tally" aria-live="polite">
+        <div class="tally-row">
+          <div class="tally-slots" id="tallyF" aria-hidden="true"></div>
+          <p class="tally-count"><span data-i18n="forbidden">禁止</span> <strong id="countF">0</strong><span class="of">/34</span></p>
+        </div>
+        <div class="tally-row">
+          <div class="tally-slots" id="tallyL" aria-hidden="true"></div>
+          <p class="tally-count"><span data-i18n="limited">限制</span> <strong id="countL">0</strong><span class="of">/8</span></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="layout">
+      <div class="pool">
+        <div class="filters">
+          <label class="search">
+            <span class="sr" data-i18n="search">搜索卡名</span>
+            <input type="search" id="q" autocomplete="off" data-i18n-ph="search" placeholder="搜索卡名">
+          </label>
+          <label class="select">
+            <span class="sr" data-i18n="sortLabel">排序</span>
+            <select id="sort">
+              <option value="rank" data-i18n="sortRank">按使用热度</option>
+              <option value="name" data-i18n="sortName">按卡名</option>
+            </select>
+          </label>
+          <label class="select" id="typeWrap" hidden>
+            <span class="sr" data-i18n="typeLabel">卡片种类</span>
+            <select id="type">
+              <option value="all" data-i18n="typeAll">全部种类</option>
+              <option value="monster" data-i18n="typeMonster">主卡组怪兽</option>
+              <option value="spell" data-i18n="typeSpell">魔法</option>
+              <option value="trap" data-i18n="typeTrap">陷阱</option>
+              <option value="extra" data-i18n="typeExtra">额外卡组</option>
+            </select>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="pickedOnly">
+            <span data-i18n="pickedOnly">只看已选</span>
+          </label>
+        </div>
+        <div class="chips" id="deckChips" role="group" aria-label="Deck"></div>
+        <div class="adder" id="adder">
+          <label class="adder-label" for="addQ" data-i18n="addLabel">不在这 150 张里？按卡名添加</label>
+          <div class="adder-box">
+            <input type="search" id="addQ" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="addList" autocomplete="off" spellcheck="false" data-i18n-ph="addPh" placeholder="输入英文卡名，例如 Maxx">
+            <ul class="adder-list" id="addList" role="listbox" hidden></ul>
+          </div>
+        </div>
+        <p class="result-line" id="resultLine"></p>
+        <div class="grid" id="grid"></div>
+      </div>
+
+      <aside class="ballot" id="ballot" aria-labelledby="ballotTitle">
+        <div class="ballot-head">
+          <h2 id="ballotTitle" data-i18n="myBallot">我的预测</h2>
+          <button type="button" class="icon-btn ballot-close" id="ballotClose" data-i18n-aria="close" aria-label="关闭">×</button>
+        </div>
+        <div class="ballot-body">
+          <section class="ballot-sec">
+            <h3><span class="ico" data-icon="ban"></span><span data-i18n="forbidden">禁止</span> <span class="ballot-n" id="bnF">0/34</span></h3>
+            <ol class="ballot-list" id="listF"></ol>
+          </section>
+          <section class="ballot-sec">
+            <h3><span class="ico" data-icon="lim"></span><span data-i18n="limited">限制</span> <span class="ballot-n" id="bnL">0/8</span></h3>
+            <ol class="ballot-list" id="listL"></ol>
+          </section>
+          <p class="ballot-empty" id="ballotEmpty" data-i18n="emptyBallot">在卡片上点“禁止”或“限制”开始挑选。</p>
+        </div>
+        <div class="ballot-foot">
+          <label class="nick">
+            <span data-i18n="nickLabel">图片署名（可选）</span>
+            <input type="text" id="nick" maxlength="24" autocomplete="nickname" data-i18n-ph="nickPh" placeholder="你的昵称">
+          </label>
+          <p class="ballot-hint" id="ballotHint"></p>
+          <div class="btn-row">
+            <button type="button" class="btn primary" id="exportMine" data-i18n="exportMine">导出预测图</button>
+            <button type="button" class="btn ghost" id="clearBtn" data-i18n="clear">清空</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="wrap foot">
+    <p id="methodNote"></p>
+    <p data-i18n="disclaimer">非官方粉丝项目，与 Konami 无关。卡图来自 YGOPRODeck。</p>
+  </footer>
+
+  <div class="mobilebar" id="mobilebar">
+    <p><span data-i18n="forbidden">禁止</span> <strong id="mbF">0</strong>/34 &nbsp; <span data-i18n="limited">限制</span> <strong id="mbL">0</strong>/8</p>
+    <button type="button" class="btn primary" id="openBallot" data-i18n="myBallot">我的预测</button>
+  </div>
+
+  <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2 id="modalTitle" data-i18n="exportTitle">你的预测图</h2>
+        <button type="button" class="icon-btn" id="modalClose" data-i18n-aria="close" aria-label="关闭">×</button>
+      </div>
+      <div class="modal-body"><img id="modalImg" alt=""></div>
+      <div class="modal-foot">
+        <p class="muted" data-i18n="exportTip">手机上可以长按图片保存。</p>
+        <a class="btn primary" id="modalDownload" download="banlist-prediction.png" data-i18n="download">下载 PNG</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
