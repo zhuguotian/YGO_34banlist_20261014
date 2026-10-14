@@ -5,8 +5,11 @@
 //  3. Fills id/type/frameType for the 150 pool cards in cards.json and downloads their
 //     small images into img/<id>.jpg, so the site never hotlinks YGOPRODeck (their API
 //     guide asks you to re-host images).
-// Usage: npm run setup            (only pool cards still missing data/images)
-//        npm run setup -- --force (re-resolve and re-download everything)
+//  4. (optional, --all-images) downloads the small image of EVERY TCG card into img/,
+//     so cards people add by name also get artwork. Resumable: rerun to continue.
+// Usage: npm run setup                    (pool cards still missing data/images)
+//        npm run setup -- --all-images    (also every other TCG card's image)
+//        npm run setup -- --force         (re-resolve and re-download pool cards)
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -17,6 +20,7 @@ const ALL_FILE = path.join(ROOT, 'allcards.json');
 const IMG_DIR = path.join(ROOT, 'img');
 const API = process.env.YGO_API || 'https://db.ygoprodeck.com/api/v7/cardinfo.php';
 const FORCE = process.argv.includes('--force');
+const ALL_IMAGES = process.argv.includes('--all-images');
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const STATUS = { Banned: 'F', Forbidden: 'F', Limited: 'L', 'Semi-Limited': 'S' };
 
@@ -98,4 +102,52 @@ console.log(`\nResolved ${done}/${pool.cards.length} pool cards.`);
 if (missing.length) {
   console.log('Not found (the site shows a text tile for these; fix the name in cards.json and rerun):');
   for (const m of missing) console.log('  - ' + m);
+}
+
+// ---- 4. (optional) every TCG card image ----
+if (ALL_IMAGES) {
+  if (!all.length) {
+    console.log('\n--all-images skipped: the full card list could not be downloaded. Rerun setup later.');
+  } else {
+    const todo = [];
+    for (const c of all) {
+      const url = c.card_images?.[0]?.image_url_small;
+      if (url && !(await exists(path.join(IMG_DIR, `${c.id}.jpg`)))) todo.push([c.id, url]);
+    }
+    console.log(`\nDownloading images for all TCG cards: ${all.length - todo.length} already here, ${todo.length} to go.`);
+    if (todo.length > 600) console.log(`About 10 per second (~${Math.ceil(todo.length / 600)} min). Ctrl+C is safe; rerun to resume.`);
+    let next = 0, ok = 0, bytes = 0;
+    const failed = [];
+    const started = Date.now();
+    async function worker() {
+      while (next < todo.length) {
+        const [id, url] = todo[next++];
+        let attempt = 0;
+        for (;;) {
+          try {
+            const res = await fetch(url);
+            if (res.status === 429) throw Object.assign(new Error('429'), { wait: 15000 });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const buf = Buffer.from(await res.arrayBuffer());
+            await fs.writeFile(path.join(IMG_DIR, `${id}.jpg`), buf);
+            ok++; bytes += buf.length;
+            break;
+          } catch (e) {
+            if (++attempt > 3) { failed.push(id); break; }
+            await sleep(e.wait || 2000 * attempt);
+          }
+        }
+        if ((ok + failed.length) % 50 === 0 || next >= todo.length) {
+          const secs = (Date.now() - started) / 1000;
+          const left = todo.length - ok - failed.length;
+          const eta = ok ? Math.round((left * secs) / (ok + failed.length) / 60) : '?';
+          process.stdout.write(`\r  ${ok + failed.length}/${todo.length}  (${(bytes / 1048576).toFixed(0)} MB, ~${eta} min left)   `);
+        }
+        await sleep(350); // 4 workers -> about 10 requests/second, well under the API's limit
+      }
+    }
+    await Promise.all(Array.from({ length: 4 }, worker));
+    console.log(`\nDownloaded ${ok} images (${(bytes / 1048576).toFixed(0)} MB).`);
+    if (failed.length) console.log(`${failed.length} failed; rerun \`npm run setup -- --all-images\` to retry them.`);
+  }
 }

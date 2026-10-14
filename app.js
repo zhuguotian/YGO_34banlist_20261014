@@ -151,7 +151,7 @@
 
   // ---------- grid ----------
   function tileHTML(c, maxCov) {
-    const src = c.custom ? null : imgSrc(c);
+    const src = imgSrc(c); // added cards use img/<id>.jpg too when it was downloaded; otherwise a text tile
     const cur = c.status === 'limited' ? `<span class="cur">${limSvg(1)}${esc(t('curLimited'))}</span>`
       : c.status === 'semi' ? `<span class="cur">${limSvg(2)}${esc(t('curSemi'))}</span>` : '';
     const decks = c.decks.map(deckLabel).join(', ');
@@ -303,7 +303,7 @@
     const tag = poolKey ? t('tagInPool') : banned ? t('tagForbidden') : status === 'limited' ? t('curLimited') : status === 'semi' ? t('curSemi') : '';
     const fOn = S.f.includes(key), lOn = S.l.includes(key);
     return `<li class="opt" role="option" aria-selected="false" data-i="${i}" style="--frame: var(--fr-${frameOf(c)})">
-      <span class="opt-fr" aria-hidden="true"></span>
+      <span class="opt-thumb" aria-hidden="true"><img src="img/${c.id}.jpg" alt="" loading="lazy" width="28" height="41"></span>
       <span class="opt-name">${esc(c.name)}</span>
       ${tag ? `<span class="opt-tag${banned ? ' bad' : ''}">${esc(tag)}</span>` : ''}
       <span class="opt-acts">
@@ -442,7 +442,7 @@
     cv.width = W * scale; cv.height = H * scale;
     const ctx = cv.getContext('2d');
     ctx.scale(scale, scale);
-    const imgs = await Promise.all([...fItems, ...lItems].map((c) => loadImg(c.custom ? null : imgSrc(c))));
+    const imgs = await Promise.all([...fItems, ...lItems].map((c) => loadImg(imgSrc(c))));
 
     ctx.fillStyle = P.paper; ctx.fillRect(0, 0, W, H);
     ctx.fillStyle = P.band; ctx.fillRect(0, 0, W, HEAD);
@@ -546,6 +546,7 @@
         if (first) { e.preventDefault(); first.focus(); }
       }
     });
+    $('#addList').addEventListener('error', (e) => { if (e.target.tagName === 'IMG') e.target.remove(); }, true); // no image -> coloured block
     $('#addList').addEventListener('click', (e) => {
       const btn = e.target.closest('button[data-add]');
       if (!btn || btn.disabled) return;
