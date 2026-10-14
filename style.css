@@ -167,14 +167,30 @@ button, input, select { font: inherit; color: inherit; }
 .ballot-head { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px 6px; }
 .ballot-head h2 { margin: 0; font: 700 26px/1 var(--font-display); }
 .ballot-close { display: none; }
+.ballot-tools { padding: 4px 16px 8px; border-bottom: 1px solid var(--line); }
+.ballot-sort { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--muted); }
+.ballot-sort select {
+  flex: 1; min-width: 0; height: 34px; padding: 0 8px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-ctrl); color: var(--ink);
+}
+.ballot-tip { margin: 6px 0 0; font-size: 12.5px; line-height: 1.4; color: var(--muted); }
 .ballot-body { overflow: auto; padding: 0 16px; flex: 1; }
 .ballot-sec h3 { display: flex; align-items: center; gap: 6px; margin: 12px 0 6px; font: 600 18px/1 var(--font-display); }
 .ballot-sec h3 .ico svg { width: 20px; height: 20px; display: block; }
 .ballot-n { margin-left: auto; color: var(--muted); font-size: 16px; }
 .ballot-list { list-style: none; margin: 0; padding: 0; }
-.ballot-list li { display: flex; align-items: center; gap: 8px; padding: 4px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.ballot-list li { display: flex; align-items: center; gap: 6px; padding: 2px 0; border-bottom: 1px solid var(--line); font-size: 14px; background: var(--surface); }
 .ballot-list li:last-child { border-bottom: 0; }
-.ballot-list .num { width: 1.8em; color: var(--muted); font: 600 14px/1 var(--font-display); text-align: right; flex: none; }
+.ballot-list li.dragging { position: relative; z-index: 1; border-radius: var(--r-ctrl); box-shadow: 0 4px 14px rgba(6, 10, 20, .22), 0 0 0 1px var(--line); }
+.ballot-list .grip {
+  flex: none; display: flex; align-items: center; justify-content: center; width: 24px; height: 30px; margin-left: -6px;
+  border: 0; border-radius: var(--r-ctrl); background: none; padding: 0; color: var(--muted); opacity: .6;
+  cursor: grab; touch-action: none;
+}
+.ballot-list .grip svg { width: 8px; height: 13px; }
+.ballot-list .grip:hover, .ballot-list .grip:focus-visible, .ballot-list li.dragging .grip { opacity: 1; color: var(--ink); }
+body.dragging, body.dragging * { cursor: grabbing !important; user-select: none; -webkit-user-select: none; }
+.ballot-list .num { width: 1.6em; color: var(--muted); font: 600 14px/1 var(--font-display); text-align: right; flex: none; }
 .ballot-list .nm { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .ballot-list .rm { border: 0; background: none; cursor: pointer; color: var(--muted); font-size: 18px; line-height: 1; padding: 2px 6px; }
 .ballot-list .rm:hover { color: var(--ban); }

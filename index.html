@@ -86,14 +86,26 @@
           <h2 id="ballotTitle" data-i18n="myBallot">我的预测</h2>
           <button type="button" class="icon-btn ballot-close" id="ballotClose" data-i18n-aria="close" aria-label="关闭">×</button>
         </div>
+        <div class="ballot-tools" id="ballotTools" hidden>
+          <label class="ballot-sort">
+            <span data-i18n="sortLabel">排序</span>
+            <select id="ballotSort">
+              <option value="pick" data-i18n="bsPick">自定义顺序</option>
+              <option value="type" data-i18n="bsType">按卡片种类</option>
+              <option value="rank" data-i18n="sortRank">按使用热度</option>
+              <option value="name" data-i18n="sortName">按卡名</option>
+            </select>
+          </label>
+          <p class="ballot-tip" data-i18n="bsTip">拖动左侧把手可以手动调整顺序，导出的图片也按这个顺序。</p>
+        </div>
         <div class="ballot-body">
           <section class="ballot-sec">
             <h3><span class="ico" data-icon="ban"></span><span data-i18n="forbidden">禁止</span> <span class="ballot-n" id="bnF">0/34</span></h3>
-            <ol class="ballot-list" id="listF"></ol>
+            <ol class="ballot-list" id="listF" data-kind="f"></ol>
           </section>
           <section class="ballot-sec">
             <h3><span class="ico" data-icon="lim"></span><span data-i18n="limited">限制</span> <span class="ballot-n" id="bnL">0/8</span></h3>
-            <ol class="ballot-list" id="listL"></ol>
+            <ol class="ballot-list" id="listL" data-kind="l"></ol>
           </section>
           <p class="ballot-empty" id="ballotEmpty" data-i18n="emptyBallot">在卡片上点“禁止”或“限制”开始挑选。</p>
         </div>

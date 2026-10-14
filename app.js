@@ -1,7 +1,7 @@
 // TCG banlist predictor — static site, everything runs in the browser.
 (() => {
   const MAX_F = 34, MAX_L = 8;
-  const LS = { draft: 'ygoban.draft', lang: 'ygoban.lang', nick: 'ygoban.nick', custom: 'ygoban.custom' };
+  const LS = { draft: 'ygoban.draft', lang: 'ygoban.lang', nick: 'ygoban.nick', custom: 'ygoban.custom', ballotSort: 'ygoban.ballotSort' };
   const MAX_CUSTOM = 50;
 
   const I18N = {
@@ -37,6 +37,8 @@
       tagInPool: '已在卡池', tagForbidden: '现已禁止',
       added: '已把 {name} 加入{kind}。', customTag: '你添加的卡', removeCustom: '从卡池移除 {name}',
       chipCustom: '我添加的', customCap: '最多添加 50 张卡池外的卡。',
+      bsPick: '自定义顺序', bsType: '按卡片种类', bsTip: '拖动左侧把手可以手动调整顺序，导出的图片也按这个顺序。',
+      bsSwitched: '已切换为自定义顺序。', grip: '调整 {name} 的位置：拖动，或按 ↑↓ 键',
     },
     en: {
       skip: 'Skip to card pool',
@@ -70,13 +72,15 @@
       tagInPool: 'Already in the pool', tagForbidden: 'Forbidden now',
       added: 'Added {name} to {kind}.', customTag: 'Added by you', removeCustom: 'Remove {name} from the pool',
       chipCustom: 'Added by me', customCap: 'You can add up to 50 extra cards.',
+      bsPick: 'Custom order', bsType: 'By card type', bsTip: 'Drag the handles to reorder. The exported image uses this order.',
+      bsSwitched: 'Switched to custom order.', grip: 'Move {name}: drag, or press ↑/↓',
     },
   };
   const DECK_SHORT = { 'Dark Magician Chaos Ritual': 'DM Chaos Ritual' };
 
   const S = {
     lang: 'zh', cards: [], pool: [], custom: [], byKey: new Map(), poolKeyByName: new Map(), poolKeyById: new Map(), meta: {},
-    f: [], l: [], nick: '',
+    f: [], l: [], nick: '', ballotSort: 'pick',
     filter: { q: '', deck: 'all', picked: false, sort: 'rank', type: 'all' },
   };
 
@@ -99,6 +103,7 @@
   const svg = (inner) => `<svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">${inner}</svg>`;
   const banSvg = () => svg(BAN_GLYPH);
   const limSvg = (d = 1) => svg(LIM_GLYPH(d));
+  const GRIP = '<svg viewBox="0 0 10 16" aria-hidden="true" focusable="false"><g fill="currentColor"><circle cx="2.5" cy="3" r="1.5"/><circle cx="7.5" cy="3" r="1.5"/><circle cx="2.5" cy="8" r="1.5"/><circle cx="7.5" cy="8" r="1.5"/><circle cx="2.5" cy="13" r="1.5"/><circle cx="7.5" cy="13" r="1.5"/></g></svg>';
 
   // ---------- card helpers ----------
   function frameOf(c) {
@@ -241,6 +246,92 @@
     pick(key, kind);
   }
 
+  // ---------- order of your picks (ballot and image) ----------
+  // 'pick' shows S.f / S.l as stored: pick order, rearranged by dragging. The other modes sort on the fly,
+  // so new picks fall into place; moving a card by hand bakes the sorted order in and switches back to 'pick'.
+  const TYPE_ORDER = { monster: 0, fusion: 1, synchro: 2, xyz: 3, link: 4, spell: 5, trap: 6 };
+  const typeOrder = (c) => { const cat = category(c); return TYPE_ORDER[cat === 'extra' ? frameOf(c) : cat] ?? 9; };
+  const byName = (a, b) => a.name.localeCompare(b.name);
+  const BALLOT_ORDER = {
+    type: (a, b) => typeOrder(a) - typeOrder(b) || byName(a, b),
+    rank: (a, b) => (a.custom ? 1 : 0) - (b.custom ? 1 : 0) || a.rank - b.rank || byName(a, b), // your added cards last
+    name: byName,
+  };
+  function ordered(keys) {
+    const cmp = BALLOT_ORDER[S.ballotSort];
+    return cmp ? keys.map((k) => S.byKey.get(k)).sort(cmp).map((c) => c.key) : keys;
+  }
+  function setBallotSort(v) {
+    S.ballotSort = BALLOT_ORDER[v] ? v : 'pick';
+    $('#ballotSort').value = S.ballotSort;
+    store.set(LS.ballotSort, S.ballotSort);
+  }
+  function commitOrder(kind, keys) {
+    if (S.ballotSort !== 'pick') {
+      const other = kind === 'f' ? 'l' : 'f';
+      S[other] = ordered(S[other]);
+      setBallotSort('pick');
+      toast(t('bsSwitched'));
+    }
+    S[kind] = keys;
+    saveDraft();
+    renderBallot();
+  }
+  const listKeys = (list) => [...list.children].map((li) => li.dataset.key);
+  function moveBy(grip, d) { // keyboard: ↑/↓ on a focused handle
+    const list = grip.closest('ol'), keys = listKeys(list);
+    const i = keys.indexOf(grip.closest('li').dataset.key), j = i + d;
+    if (j < 0 || j >= keys.length) return;
+    [keys[i], keys[j]] = [keys[j], keys[i]];
+    commitOrder(list.dataset.kind, keys);
+    list.children[j].querySelector('.grip').focus();
+  }
+
+  // Pointer drag (mouse and touch). The row moves through the list live; the ballot body scrolls near its edges.
+  let drag = null;
+  function dragStart(e) {
+    const grip = e.target.closest('.grip');
+    if (!grip || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    e.preventDefault();
+    const li = grip.closest('li'), list = li.parentElement;
+    drag = { li, list, body: $('#ballot .ballot-body'), y: e.clientY, before: listKeys(list), raf: 0 };
+    grip.setPointerCapture(e.pointerId);
+    li.classList.add('dragging'); document.body.classList.add('dragging');
+    drag.raf = requestAnimationFrame(dragScroll);
+  }
+  function dragPlace() {
+    const { li, list, y } = drag;
+    const next = [...list.children].find((el) => el !== li && y < el.getBoundingClientRect().top + el.offsetHeight / 2) || null;
+    if (next === li.nextElementSibling) return;
+    list.insertBefore(li, next);
+    [...list.children].forEach((el, i) => { el.querySelector('.num').textContent = i + 1; });
+  }
+  function dragMove(e) {
+    if (!drag) return;
+    drag.y = e.clientY;
+    dragPlace();
+  }
+  function dragScroll() {
+    if (!drag) return;
+    const { body, y } = drag, r = body.getBoundingClientRect(), edge = 40;
+    const v = y < r.top + edge ? y - (r.top + edge) : y > r.bottom - edge ? y - (r.bottom - edge) : 0;
+    if (v) {
+      const top = body.scrollTop;
+      body.scrollTop += Math.max(-16, Math.min(16, v / 2));
+      if (body.scrollTop !== top) dragPlace();
+    }
+    drag.raf = requestAnimationFrame(dragScroll);
+  }
+  function dragEnd() {
+    if (!drag) return;
+    const { li, list, before, raf } = drag;
+    drag = null;
+    cancelAnimationFrame(raf);
+    li.classList.remove('dragging'); document.body.classList.remove('dragging');
+    const keys = listKeys(list);
+    if (list.contains(li) && keys.some((k, i) => k !== before[i])) commitOrder(list.dataset.kind, keys);
+  }
+
   // ---------- your own cards (outside the pool) ----------
   function saveCustom() {
     store.set(LS.custom, JSON.stringify(S.custom.map(({ key, id, name, frameType, status }) => ({ key, id, name, frameType, status }))));
@@ -355,14 +446,15 @@
   function renderBallot() {
     const li = (k, i, kind) => {
       const c = S.byKey.get(k);
-      return `<li><span class="num">${i + 1}</span><span class="nm" title="${esc(c.name)}">${esc(c.name)}</span><button type="button" class="rm" data-rm="${esc(k)}" data-kind="${kind}" aria-label="${esc(t('remove', { name: c.name }))}">×</button></li>`;
+      return `<li data-key="${esc(k)}"><button type="button" class="grip" aria-label="${esc(t('grip', { name: c.name }))}" title="${esc(t('grip', { name: c.name }))}">${GRIP}</button><span class="num">${i + 1}</span><span class="nm" title="${esc(c.name)}">${esc(c.name)}</span><button type="button" class="rm" data-rm="${esc(k)}" data-kind="${kind}" aria-label="${esc(t('remove', { name: c.name }))}">×</button></li>`;
     };
-    $('#listF').innerHTML = S.f.map((k, i) => li(k, i, 'f')).join('');
-    $('#listL').innerHTML = S.l.map((k, i) => li(k, i, 'l')).join('');
+    $('#listF').innerHTML = ordered(S.f).map((k, i) => li(k, i, 'f')).join('');
+    $('#listL').innerHTML = ordered(S.l).map((k, i) => li(k, i, 'l')).join('');
     $('#bnF').textContent = `${S.f.length}/${MAX_F}`;
     $('#bnL').textContent = `${S.l.length}/${MAX_L}`;
     const empty = S.f.length + S.l.length === 0;
     $('#ballotEmpty').hidden = !empty;
+    $('#ballotTools').hidden = empty;
     $('#exportMine').disabled = empty;
     const leftF = MAX_F - S.f.length, leftL = MAX_L - S.l.length;
     $('#ballotHint').textContent = empty ? '' : (leftF || leftL ? t('hintIncomplete', { f: leftF, l: leftL }) : t('hintDone'));
@@ -429,7 +521,7 @@
     try {
       await Promise.all([document.fonts.load(`700 40px ${FONT_D}`), document.fonts.load(`600 16px ${FONT_D}`), document.fonts.load(`500 16px ${FONT_B}`)]);
     } catch { /* fall back to system fonts */ }
-    const fItems = S.f.map((k) => S.byKey.get(k)), lItems = S.l.map((k) => S.byKey.get(k));
+    const fItems = ordered(S.f).map((k) => S.byKey.get(k)), lItems = ordered(S.l).map((k) => S.byKey.get(k));
     const W = 1200, PAD = 48, COLS = 8, GAP = 14;
     const cellW = (W - PAD * 2 - GAP * (COLS - 1)) / COLS;
     const imgH = Math.round((cellW * 246) / 168);
@@ -576,6 +668,17 @@
       const rm = e.target.closest('[data-rm]');
       if (rm) toggle(rm.dataset.rm, rm.dataset.kind);
     });
+    $('#ballotSort').addEventListener('change', (e) => { setBallotSort(e.target.value); renderBallot(); });
+    $('#ballot').addEventListener('pointerdown', dragStart);
+    $('#ballot').addEventListener('pointermove', dragMove);
+    $('#ballot').addEventListener('pointerup', dragEnd);
+    $('#ballot').addEventListener('pointercancel', dragEnd);
+    $('#ballot').addEventListener('keydown', (e) => {
+      const grip = e.target.closest('.grip');
+      if (!grip || (e.key !== 'ArrowUp' && e.key !== 'ArrowDown')) return;
+      e.preventDefault();
+      moveBy(grip, e.key === 'ArrowUp' ? -1 : 1);
+    });
     $('#q').addEventListener('input', (e) => { S.filter.q = e.target.value; applyFilter(); });
     $('#sort').addEventListener('change', (e) => { S.filter.sort = e.target.value; applyFilter(); });
     $('#type').addEventListener('change', (e) => { S.filter.type = e.target.value; applyFilter(); });
@@ -614,6 +717,9 @@
     S.lang = saved === 'en' || saved === 'zh' ? saved : ((navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en');
     S.nick = store.get(LS.nick) || '';
     $('#nick').value = S.nick;
+    const savedSort = store.get(LS.ballotSort);
+    S.ballotSort = BALLOT_ORDER[savedSort] ? savedSort : 'pick';
+    $('#ballotSort').value = S.ballotSort;
     bind();
     buildTally();
     applyI18n();
